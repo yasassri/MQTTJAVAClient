@@ -1,4 +1,3 @@
-import com.sun.javafx.binding.StringFormatter;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -21,14 +20,14 @@ public class MQTTTopicSubscriber {
         String userName = "admin";
         String password = "admin";
 
-        String brokerURL      = "tcp://localhost:1883";
+        String brokerURL      = "tcp://localhost:1883"; // The broker URL in <HOST>:<PORT> format
 
         String clientId     = "JavaSample";
-        boolean addRandomSuffixClientID = true; // This will add a Random suffix between 1 and 100000 to the clientID
+        boolean addRandomSuffixClientID = false; // This will add a Random suffix between 1 and 100000 to the clientID
 
         MemoryPersistence persistence = new MemoryPersistence();
 
-        boolean setCleanSession = true; // This will set the clean Session to TRUE or FALSE
+        boolean setCleanSession = false; // This will set the clean Session to TRUE or FALSE
 
         try {
             if (addRandomSuffixClientID){

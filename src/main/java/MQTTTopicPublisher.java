@@ -21,7 +21,7 @@ public class MQTTTopicPublisher {
         String brokerURL      = "tcp://localhost:1883";
 
         String clientId     = "JavaSample";
-        boolean addRandomSuffixClientID = true; // This will add a Random suffix between 1 and 100000 to the clientID
+        boolean addRandomSuffixClientID = false; // This will add a Random suffix between 1 and 100000 to the clientID
 
         boolean setCleanSession = true; // This will set the clean Session to TRUE or FALSE
 
